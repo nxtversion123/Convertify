@@ -9,6 +9,7 @@ function Alert(props){
     // };
     
       return (
+        // yaha layout shift hota h agar alert aati h to uske liye div bana kar height set kar denge jisse alert component ki khudki height hogi to layout shift nhi hoga. is shift ko cls:cumulative layout shift kahte h jo minimum hona chahiye website me[good for SEO+]
         props.alerT && (
           <div
             className={`alert alert-$(props.alerT.typ)  alert-dismissiable fade show`}
@@ -16,17 +17,17 @@ function Alert(props){
             style={{
               backgroundColor: "lightcoral",
               fontWeight: "larger",
-              position: "fixed",
-              top: "70px",
+              position: "absolute",
+              top: "65px",
               width: 'calc(100% - 8px)',
+              height:'60px'
             }}
           >
             <strong>{props.alerT.typ}</strong>
             {props.alerT.msg}
             <button
               style={{
-                position: "fixed",
-                top: "76px",
+                position: "absolute",
                 right: "5px",
                 backgroundColor: "rgb(179, 154, 196)",
                 color: "Black",

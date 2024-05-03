@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 export default function ColorPalette() {
+      const [bgColor, setBgColor] = useState("");
+
   const ColorChanger = () => {
-    const [backgroundgColor, setBackgroundColor] = useState("");
     const changeColor = (color) => {
       document.body.style.backgroundColor = color;
-      setBackgroundColor(color);
+      setBgColor(color);
     };
     return (
       <div>
@@ -15,7 +16,7 @@ export default function ColorPalette() {
             position: "absolute",
             top: "9px",
             right: "170px",
-            backgroundColor: {},
+            backgroundColor: {bgColor},
           }}
         >
           <button
@@ -24,7 +25,7 @@ export default function ColorPalette() {
             }}
             class="circle1"
             style={{
-              bgColor: "",
+              // bgColor: "",
 
               backgroundColor: "red",
               margin: "5px",
@@ -41,7 +42,7 @@ export default function ColorPalette() {
             }}
             class="circle2"
             style={{
-              bgColor: "",
+              // bgColor: "",
               backgroundColor: "blue",
               margin: "5px",
               display: "inline-block",
